@@ -1,9 +1,11 @@
+import ControlPanel from '@/components/ControlPanel'
 import React from 'react'
 
 const HomePage = () => {
   return (
-    <main>
-        Hola
+    <main className='px-3'>
+        <h2>Control para terreneitooorrrrr!!!</h2>
+        <ControlPanel/>
     </main>
   )
 }
