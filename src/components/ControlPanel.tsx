@@ -5,7 +5,7 @@ import useSocket from "@/hooks/websockets/useControlSocket";
 
 const ControlPanel = () => {
   const { sendMessage } = useSocket(
-    "http://127.0.0.1:8000"
+    "http://192.168.10.24:8000"
   );
 
   return (
@@ -13,30 +13,30 @@ const ControlPanel = () => {
       <div>
         <ControlButton
           text="Adelante"
-          onMouseDown={() => sendMessage("control", "adelante")}
+          onMouseDown={() => sendMessage("control", "0")}
           onMouseUp={()=> sendMessage("control","detener")}
         ></ControlButton>
       </div>
       <div className="flex">
         <ControlButton
-          onMouseDown={() => sendMessage("control", "izquierda")}
+          onMouseDown={() => sendMessage("control", "2")}
           onMouseUp={()=> sendMessage("control","detener")}
           text="Izquierda"
         />
         <ControlButton
-          onMouseDown={() => sendMessage("control", "bocina")}
+          onMouseDown={() => sendMessage("control", "5")}
           onMouseUp={()=> sendMessage("control","detener")}
           text="Bocina"
         />
         <ControlButton
-          onMouseDown={() => sendMessage("control", "derecha")}
+          onMouseDown={() => sendMessage("control", "3")}
           onMouseUp={()=> sendMessage("control","detener")}
           text="Derecha"
         />
       </div>
       <div>
         <ControlButton
-          onMouseDown={() => sendMessage("control", "atras")}
+          onMouseDown={() => sendMessage("control", "1")}
           onMouseUp={()=> sendMessage("control","detener")}
           text="Atrás"
         />
